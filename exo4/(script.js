@@ -1,6 +1,9 @@
 let result = document.getElementById('result');
 
 function appendToResult(value) {
+    if (result.value === 'Erreur') {
+        clearResult();
+    }
     result.value += value;
 }
 
