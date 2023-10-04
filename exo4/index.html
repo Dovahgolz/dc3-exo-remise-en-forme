@@ -1,35 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculatrice Simple</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<title>calculatrice simple</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="calculator">
-        <div class="display">
-            <input type="text" id="result" readonly>
-        </div>
-        <div class="buttons">
-            <button onclick="appendToResult('1')">1</button>
-            <button onclick="appendToResult('2')">2</button>
-            <button onclick="appendToResult('3')">3</button>
-            <button onclick="appendToResult('+')">+</button>
-            <button onclick="appendToResult('4')">4</button>
-            <button onclick="appendToResult('5')">5</button>
-            <button onclick="appendToResult('6')">6</button>
-            <button onclick="appendToResult('-')">-</button>
-            <button onclick="appendToResult('7')">7</button>
-            <button onclick="appendToResult('8')">8</button>
-            <button onclick="appendToResult('9')">9</button>
-            <button onclick="appendToResult('*')">*</button>
-            <button onclick="appendToResult('0')">0</button>
-            <button onclick="clearResult()">C</button>
-            <button onclick="calculateResult()">=</button>
-            <button onclick="appendToResult('/')">/</button>
-        </div>
-    </div>
-    <script src="script.js"></script>
+
+<table class="calculator" >
+<tr>
+<td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
+
+<td> <input type="button" value="C" onclick="clearScreen()" id="btn" /> </td>
+</tr>
+<tr>
+<td> <input type="button" value="1" onclick="display('1')" /> </td>
+<td> <input type="button" value="2" onclick="display('2')" /> </td>
+<td> <input type="button" value="3" onclick="display('3')" /> </td>
+<td> <input type="button" value="/" onclick="display('/')" /> </td>
+</tr>
+<tr>
+<td> <input type="button" value="4" onclick="display('4')" /> </td>
+<td> <input type="button" value="5" onclick="display('5')" /> </td>
+<td> <input type="button" value="6" onclick="display('6')" /> </td>
+<td> <input type="button" value="-" onclick="display('-')" /> </td>
+</tr>
+<tr>
+<td> <input type="button" value="7" onclick="display('7')" /> </td>
+<td> <input type="button" value="8" onclick="display('8')" /> </td>
+<td> <input type="button" value="9" onclick="display('9')" /> </td>
+<td> <input type="button" value="+" onclick="display('+')" /> </td>
+</tr>
+<tr>
+<td> <input type="button" value="." onclick="display('.')" /> </td>
+<td> <input type="button" value="0" onclick="display('0')" /> </td>
+
+<td> <input type="button" value="=" onclick="calculate()" id="btn" /> </td>
+<td> <input type="button" value="*" onclick="display('*')" /> </td>
+</tr>
+</table>
+
+<script type="text/javascript" src="script.js"></script>
+
 </body>
+
 </html>

@@ -1,17 +1,16 @@
+// script.js
+
 let result = document.getElementById('result');
 
-function appendToResult(value) {
-    if (result.value === 'Erreur') {
-        clearResult();
-    }
+function display(value) {
     result.value += value;
 }
 
-function clearResult() {
+function clearScreen() {
     result.value = '';
 }
 
-function calculateResult() {
+function calculate() {
     try {
         result.value = eval(result.value);
     } catch (error) {
