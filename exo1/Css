@@ -1,0 +1,16 @@
+styles.css 
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.image-grid img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s; 
+}
+
+.image-grid img:hover {
+    transform: scale(1.1); 
+}
